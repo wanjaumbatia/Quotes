@@ -1,0 +1,11 @@
+<div *ngFor="let quote of quotes; let i = index">
+    <div class="card m-5" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{quote.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{quote.author}}</h6>
+          <p class="card-text">{{quote.quote}}.</p>
+          <a (click)="upvote(i)" class="card-link mr-2"><i class="fas fa-thumbs-up"></i>UpVote</a>{{quote.upvote}}
+          <a (click)="downvote(i)" class="card-link  mr-2"><i class="fas fa-thumbs-down"></i>DownVote</a>{{quote.downvote}}
+        </div>
+      </div>
+</div>
